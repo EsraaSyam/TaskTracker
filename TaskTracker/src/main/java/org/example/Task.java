@@ -1,14 +1,16 @@
+package org.example;
+import java.io.*;
 import java.time.LocalDateTime;
 public class Task {
-    private int cnt = 1;
     private int id;
     private String description;
     private String status; // (todo, in-progress, done)
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Task(String description){ // constructor
-        this.id = cnt++;
+
+    public Task(String description , int cnt){ // constructor
+        this.id = cnt;
         this.description = description;
         this.status = "todo";
         this.createdAt = LocalDateTime.now();
@@ -46,5 +48,16 @@ public class Task {
     public void setStatus(String status){
         this.status = status;
         this.updatedAt = LocalDateTime.now();
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", status='" + status + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                '}';
     }
 }
