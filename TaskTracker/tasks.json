@@ -91,36 +91,5 @@
         "nano": 859655000
       }
     }
-  },
-  {
-    "id": 4,
-    "description": "make a cake",
-    "status": "todo",
-    "createdAt": {
-      "date": {
-        "year": 2024,
-        "month": 9,
-        "day": 21
-      },
-      "time": {
-        "hour": 17,
-        "minute": 33,
-        "second": 47,
-        "nano": 405074000
-      }
-    },
-    "updatedAt": {
-      "date": {
-        "year": 2024,
-        "month": 9,
-        "day": 21
-      },
-      "time": {
-        "hour": 17,
-        "minute": 33,
-        "second": 47,
-        "nano": 405127000
-      }
-    }
   }
 ]
