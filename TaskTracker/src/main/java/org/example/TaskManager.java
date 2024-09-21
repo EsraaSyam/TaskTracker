@@ -80,5 +80,16 @@ public class TaskManager {
         System.out.println("Task updated successfully");
         writeTasksToJsonFile(tasks);
     }
+
+    public void delete(int id){
+        Task task = tasks.stream().filter(t -> t.getId() == id).findFirst().orElse(null);
+        if (task == null) {
+            System.out.println("Task with ID " + id + " not found");
+            return;
+        }
+        tasks.remove(task);
+        System.out.println("Task deleted successfully");
+        writeTasksToJsonFile(tasks);
+    }
 }
 

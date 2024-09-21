@@ -35,6 +35,13 @@ public class Main {
                 }
                 t.update(Integer.parseInt(args[1]), args[2]);
                 break;
+            case "delete" :
+                if(args.length < 2){
+                    System.out.println("must provide id");
+                    return;
+                }
+                t.delete(Integer.parseInt(args[1]));
+                break;
             default:
                 System.out.println("Unknown command: " + op);
                 break;
