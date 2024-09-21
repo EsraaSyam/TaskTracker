@@ -91,5 +91,58 @@ public class TaskManager {
         System.out.println("Task deleted successfully");
         writeTasksToJsonFile(tasks);
     }
+
+    public void list(){
+            if(tasks.isEmpty()){
+                System.out.println("No tasks available.");
+            }else{
+                int taskNumber = 1;
+                for(Task t : tasks){
+                    System.out.println("Task " + taskNumber + ":");
+                    System.out.println("    ID: " + t.getId());
+                    System.out.println("    Description: " + t.getDescription());
+                    System.out.println("    Status: " + t.getStatus());
+                    System.out.println();
+                    taskNumber++;
+                }
+                System.out.println("Total tasks: " + tasks.size());
+            }
+    }
+
+    public void list(String status){
+        List < Task > filteredTasks = new ArrayList<>();
+        for(Task t : tasks){
+            if(t.getStatus().equals(status)){
+                filteredTasks.add(t);
+            }
+        }
+        if(filteredTasks.isEmpty()){
+            System.out.println("No tasks with status " + status);
+        }else{
+            int taskNumber = 1;
+            for(Task t : filteredTasks){
+                System.out.println("Task " + taskNumber + ":");
+                System.out.println("    ID: " + t.getId());
+                System.out.println("    Description: " + t.getDescription());
+                System.out.println("    Status: " + t.getStatus());
+                System.out.println();
+                taskNumber++;
+            }
+            System.out.println("Total tasks: " + filteredTasks.size());
+        }
+    }
+
+    public void mark(int id, String status){
+        Task task = tasks.stream().filter(t -> t.getId() == id).findFirst().orElse(null);
+        if (task == null) {
+            System.out.println("Task with ID " + id + " not found");
+            return;
+        }
+        task.setStatus(status);
+        System.out.println("Task marked as " + status);
+        writeTasksToJsonFile(tasks);
+    }
+
+
 }
 
