@@ -42,6 +42,22 @@ public class Main {
                 }
                 t.delete(Integer.parseInt(args[1]));
                 break;
+            case "list" :
+                if(args.length == 1){
+                    t.list();
+                }else if(args.length == 2){
+                    t.list(args[1]);
+                }else{
+                    System.out.println("invalid command");
+                }
+                break;
+            case "mark" :
+                if(args.length < 3){
+                    System.out.println("must provide id and status");
+                    return;
+                }
+                t.mark(Integer.parseInt(args[1]), args[2]);
+                break;
             default:
                 System.out.println("Unknown command: " + op);
                 break;
