@@ -69,4 +69,16 @@ public class TaskManager {
         writeTasksToJsonFile(tasks);
         saveCountToFile(cnt);
     }
+
+    public void update(int id, String description) {
+        Task task = tasks.stream().filter(t -> t.getId() == id).findFirst().orElse(null);
+        if (task == null) {
+            System.out.println("Task with ID " + id + " not found");
+            return;
+        }
+        task.setDescription(description);
+        System.out.println("Task updated successfully");
+        writeTasksToJsonFile(tasks);
+    }
 }
+
