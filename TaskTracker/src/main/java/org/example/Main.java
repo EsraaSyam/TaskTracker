@@ -23,10 +23,17 @@ public class Main {
         switch (op){
             case "add" :
                 if(args.length < 2){
-                    System.out.println("add a description");
+                    System.out.println("must provide description");
                     return;
                 }
                 t.add(args[1]);
+                break;
+            case "update" :
+                if(args.length < 3){
+                    System.out.println("must provide id and description");
+                    return;
+                }
+                t.update(Integer.parseInt(args[1]), args[2]);
                 break;
             default:
                 System.out.println("Unknown command: " + op);
@@ -36,3 +43,4 @@ public class Main {
 
     }
 }
+
