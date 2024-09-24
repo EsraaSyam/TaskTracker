@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args){
         TaskManager t = new TaskManager();
         if(args.length < 1){
-            System.out.println("command not found");
+            System.out.println("must provide operation");
             return;
         }
 
@@ -43,12 +43,10 @@ public class Main {
                 t.delete(Integer.parseInt(args[1]));
                 break;
             case "list" :
-                if(args.length == 1){
+                if(args.length < 2){
                     t.list();
-                }else if(args.length == 2){
-                    t.list(args[1]);
                 }else{
-                    System.out.println("invalid command");
+                    t.list(args[1]);
                 }
                 break;
             case "mark" :
@@ -57,6 +55,15 @@ public class Main {
                     return;
                 }
                 t.mark(Integer.parseInt(args[1]), args[2]);
+                break;
+            case "help":
+                System.out.println("add <description> - add a new task\n" +
+                        "update <id> <description> - update the description of a task\n" +
+                        "delete <id> - delete a task\n" +
+                        "list - list all tasks\n" +
+                        "list <status> - list all tasks with the given status\n" +
+                        "mark <id> <status> - mark a task as done or undone\n" +
+                        "help - display this help message");
                 break;
             default:
                 System.out.println("Unknown command: " + op);
