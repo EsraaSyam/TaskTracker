@@ -2,7 +2,7 @@
   {
     "id": 1,
     "description": "Buy lip gloss",
-    "status": "in-progress",
+    "status": "done",
     "createdAt": {
       "date": {
         "year": 2024,
@@ -23,10 +23,10 @@
         "day": 24
       },
       "time": {
-        "hour": 19,
-        "minute": 25,
-        "second": 1,
-        "nano": 111648000
+        "hour": 20,
+        "minute": 35,
+        "second": 13,
+        "nano": 508564000
       }
     }
   },

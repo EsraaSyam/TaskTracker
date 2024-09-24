@@ -38,19 +38,19 @@ mvn compile
 ./task-cli.sh update <new_description> <task_id>
 
 # mark task as done
-./task-cli.sh done <task_id>
+./task-cli.sh mark-done <task_id>
 
 # mark task as in-progress
-./task-cli.sh in-progress <task_id>
-
-# mark task as to-do
-./task-cli.sh to-do <task_id>
+./task-cli.sh mark-in-progress <task_id>
 
 # list all tasks
 ./task-cli.sh list
 
 # list tasks with their status
-./task-cli.sh list-status
+./task-cli.sh list to-do
+./task-cli.sh list in-progress
+./task-cli.sh list done
+./task-cli.sh list not-done
 ```
 
 

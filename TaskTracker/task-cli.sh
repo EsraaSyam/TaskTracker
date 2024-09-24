@@ -23,7 +23,7 @@ case $COMMAND in
     mark-done)
         ID=$2
         STATUS="done"
-        mvn exec:java -Dexec.mainClass="org.example.Main" -Dexec.args="mark-done \"$ID\" \"$STATUS\""
+        mvn exec:java -Dexec.mainClass="org.example.Main" -Dexec.args="mark \"$ID\" \"$STATUS\""
         ;;
     list)
         STATUS=$2
