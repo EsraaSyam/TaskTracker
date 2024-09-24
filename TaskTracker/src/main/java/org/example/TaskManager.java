@@ -27,7 +27,7 @@ public class TaskManager {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         try (FileWriter writer = new FileWriter(FILE_PATH)) {
             gson.toJson(tasks, writer);
-            System.out.println("Tasks have been written to " + FILE_PATH);
+            // System.out.println("Tasks have been written to " + FILE_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -111,9 +111,17 @@ public class TaskManager {
 
     public void list(String status){
         List < Task > filteredTasks = new ArrayList<>();
-        for(Task t : tasks){
-            if(t.getStatus().equals(status)){
-                filteredTasks.add(t);
+        if(status.equals("not-done")){
+            for(Task t : tasks){
+                if(t.getStatus().equals("todo") || t.getStatus().equals("in-progress")){
+                    filteredTasks.add(t);
+                }
+            }
+        }else{
+            for(Task t : tasks){
+                if(t.getStatus().equals(status)){
+                    filteredTasks.add(t);
+                }
             }
         }
         if(filteredTasks.isEmpty()){
