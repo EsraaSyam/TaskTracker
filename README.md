@@ -31,7 +31,7 @@ This is a simple command-line interface (CLI) application built with Java, desig
    mvn compile
    ```
 
-## ## 🚀 Usage
+## 🚀 Usage
 
 ### ➕ Add a New Task
 
