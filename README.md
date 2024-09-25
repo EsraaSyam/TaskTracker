@@ -1,64 +1,94 @@
-# Task Tracker CLI APP
-This is a simple command-line interface (CLI) application built with Java, designed to help you track and manage your tasks. The project uses the `com.google.code.gson` package to handle JSON file operations for storing and retrieving task data.
+# 📋 Task Tracker CLI APP
 
-## Features
-- Add new task
-- Delete task
-- Mark task as (done , in-progress , to-do)
-- update task
-- list all tasks
-- list tasks with their status 
+This is a simple command-line interface (CLI) application built with Java, designed to help you track and manage your tasks. The project uses the `com.google.code.gson` package to handle JSON file operations for storing and retrieving task data.
 
+## ✨ Features
 
-## Installation
-1. Clone the repository 
+- **➕ Add new task**
+- **❌ Delete task**
+- **🔄 Mark task as**: done, in-progress, to-do
+- **✏️ Update task**
+- **📋 List all tasks**
+- **📊 List tasks by status**
+
+## 🛠️ Installation
+
+1. **Clone the repository:**
+   
+   ```bash
+   git clone https://github.com/Software-Backend-Training/TaskTracker.git
+   ```
+
+2. **Change directory to the project folder:**
+   
+   ```bash
+   cd TaskTracker/TaskTracker
+   ```
+
+3. **Compile the source code:**
+   
+   ```bash
+   mvn compile
+   ```
+
+## ## 🚀 Usage
+
+### ➕ Add a New Task
+
 ```bash
-git clone https://github.com/Software-Backend-Training/TaskTracker.git
+./task-cli.sh add <description>
 ```
 
-2. Change directory to the project folder
-```bash
-cd TaskTracker/TaskTracker
-```
+### ❌ Delete a Task
 
-3. Compile the source code:
 ```bash
-mvn compile
-```
-
-## Usage
-```bash
-# add new task
-./task-cli.sh add <discrption>
-
-# delete task
 ./task-cli.sh delete <task_id>
+```
 
-# update task description
+### ✏️ Update Task Description
+
+```bash
 ./task-cli.sh update <new_description> <task_id>
+```
 
-# mark task as done
+### ✅ Mark Task as Done
+
+```bash
 ./task-cli.sh mark-done <task_id>
+```
 
-# mark task as in-progress
+### 🔄 Mark Task as In-Progress
+
+```bash
 ./task-cli.sh mark-in-progress <task_id>
+```
 
-# list all tasks
+### 📋 List All Tasks
+
+```bash
 ./task-cli.sh list
+```
 
-# list tasks with their status
+### 📊 List Tasks by Status
+
+```bash
+# To-Do
 ./task-cli.sh list to-do
+
+# In-Progress
 ./task-cli.sh list in-progress
+
+# Done
 ./task-cli.sh list done
+
+# Not Done
 ./task-cli.sh list not-done
 ```
 
+## 🤝 Contributing
 
-## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+---
 
-
-
-
-
+I hope this version is more appealing! Let me know if there’s anything else you’d like to adjust. 😊
