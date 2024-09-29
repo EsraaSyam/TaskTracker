@@ -13,6 +13,10 @@ This is a simple command-line interface (CLI) application built with Java, desig
 
 ## 🛠️ Installation
 
+1. **Ensure Java 8 is installed:**
+
+   Make sure you have Java 8 installed. If you don't, you can download and install it from the [official website](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html).
+
 1. **Clone the repository:**
    
    ```bash
