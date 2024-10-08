@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args){
         TaskManager t = new TaskManager();
         if(args.length < 1){
-            System.out.println("must provide operation");
+            System.out.println("must provide operation, use help to see all operations");
             return;
         }
 
