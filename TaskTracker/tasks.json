@@ -2,7 +2,7 @@
   {
     "id": 1,
     "description": "Buy lip gloss",
-    "status": "done",
+    "status": "in-progress",
     "createdAt": {
       "date": {
         "year": 2024,
@@ -19,21 +19,21 @@
     "updatedAt": {
       "date": {
         "year": 2024,
-        "month": 9,
-        "day": 24
+        "month": 10,
+        "day": 8
       },
       "time": {
-        "hour": 20,
-        "minute": 35,
-        "second": 13,
-        "nano": 508564000
+        "hour": 19,
+        "minute": 51,
+        "second": 51,
+        "nano": 183000000
       }
     }
   },
   {
     "id": 2,
     "description": "solve a problem",
-    "status": "todo",
+    "status": "to-do",
     "createdAt": {
       "date": {
         "year": 2024,
@@ -64,7 +64,7 @@
   {
     "id": 3,
     "description": "go to the gym",
-    "status": "todo",
+    "status": "to-do",
     "createdAt": {
       "date": {
         "year": 2024,
@@ -95,7 +95,7 @@
   {
     "id": 5,
     "description": "buy seram",
-    "status": "todo",
+    "status": "to-do",
     "createdAt": {
       "date": {
         "year": 2024,

@@ -12,7 +12,7 @@ public class Task {
     public Task(String description , int cnt){ // constructor
         this.id = cnt;
         this.description = description;
-        this.status = "todo";
+        this.status = "to-do";
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }

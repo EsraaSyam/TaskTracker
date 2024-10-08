@@ -111,9 +111,13 @@ public class TaskManager {
 
     public void list(String status){
         List < Task > filteredTasks = new ArrayList<>();
+        if(!status.equals("to-do") && !status.equals("in-progress") && !status.equals("done") && !status.equals("not-done")){
+            System.out.println("Invalid status");
+            return;
+        }
         if(status.equals("not-done")){
             for(Task t : tasks){
-                if(t.getStatus().equals("todo") || t.getStatus().equals("in-progress")){
+                if(t.getStatus().equals("to-do") || t.getStatus().equals("in-progress")){
                     filteredTasks.add(t);
                 }
             }
@@ -141,6 +145,10 @@ public class TaskManager {
     }
 
     public void mark(int id, String status){
+        if(status == null || (!status.equals("done") && !status.equals("not-done") && !status.equals("to-do") && !status.equals("in-progress"))){
+            System.out.println("Invalid status");
+            return;
+        }
         Task task = tasks.stream().filter(t -> t.getId() == id).findFirst().orElse(null);
         if (task == null) {
             System.out.println("Task with ID " + id + " not found");

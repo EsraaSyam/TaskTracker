@@ -46,7 +46,7 @@ public class Main {
                 if(args.length < 2){
                     t.list();
                 }else{
-                    t.list(args[1]);
+                    t.list(args[1]); 
                 }
                 break;
             case "mark" :
@@ -66,7 +66,7 @@ public class Main {
                         "help - display this help message");
                 break;
             default:
-                System.out.println("Unknown command: " + op);
+                System.out.println(op + " is not a valid operation use help to see all operations");
                 break;
         }
 

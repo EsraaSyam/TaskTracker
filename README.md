@@ -14,22 +14,26 @@ This is a simple command-line interface (CLI) application built with Java, desig
 ## 🛠️ Installation
 
 1. **Ensure Java 8 is installed:**
-
+   
    Make sure you have Java 8 installed. If you don't, you can download and install it from the [official website](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html).
 
-1. **Clone the repository:**
+2. **Ensure Maven is installed:**
+   
+   Ensure Maven is installed and configured to work with Java 8. If you don't have Maven installed, you can download it from the [Maven website](https://maven.apache.org/install.html) and follow the installation instructions.
+
+3. **Clone the repository:**
    
    ```bash
-   git clone https://github.com/Software-Backend-Training/TaskTracker.git
+   git clone https://github.com/EsraaSyam/TaskTracker.git
    ```
 
-2. **Change directory to the project folder:**
+4. **Change directory to the project folder:**
    
    ```bash
    cd TaskTracker/TaskTracker
    ```
 
-3. **Compile the source code:**
+5. **Compile the source code:**
    
    ```bash
    mvn compile
