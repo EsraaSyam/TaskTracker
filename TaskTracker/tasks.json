@@ -91,36 +91,5 @@
         "nano": 859655000
       }
     }
-  },
-  {
-    "id": 5,
-    "description": "buy seram",
-    "status": "to-do",
-    "createdAt": {
-      "date": {
-        "year": 2024,
-        "month": 9,
-        "day": 24
-      },
-      "time": {
-        "hour": 20,
-        "minute": 17,
-        "second": 15,
-        "nano": 377737000
-      }
-    },
-    "updatedAt": {
-      "date": {
-        "year": 2024,
-        "month": 9,
-        "day": 24
-      },
-      "time": {
-        "hour": 20,
-        "minute": 20,
-        "second": 24,
-        "nano": 176459000
-      }
-    }
   }
 ]
